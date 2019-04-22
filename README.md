@@ -8,11 +8,11 @@
 Simple Desc : It  is my process of learning springboot ...
 
 ## Before Tools
-JDK  1.8+
-Gradle 5.4
-IDEA  2018.3x
-Maven 3.9+
-SpringBoot 2.0.3.RELEASE
+* JDK  1.8+
+* Gradle 5.4
+* IDEA  2018.3x
+* Maven 3.9+
+* SpringBoot 2.0.3.RELEASE
 
 ## Description
 

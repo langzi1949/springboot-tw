@@ -6,16 +6,16 @@ bin/
 /target/ 
 /log.txt
 /*.iml
-./*/.idea/
-./*/.gradle/
-./*/build/
-./*/out/
-./*/.classpath
-./*/.settings
-./*/.project
-./*/target/
-./*/bin/
-./*/target/
-./*/*.iml
+/*/.idea/
+/*/.gradle/
+/*/build/
+/*/out/
+/*/.classpath
+/*/.settings
+/*/.project
+/*/target/
+/*/bin/
+/*/target/
+/*/*.iml
 
 

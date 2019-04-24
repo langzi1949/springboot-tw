@@ -5,6 +5,8 @@ target/
 bin/
 /target/ 
 /log.txt
+.idea/
+*.iml
 /*.iml
 /*/.idea/
 /*/.gradle/

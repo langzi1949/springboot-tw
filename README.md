@@ -18,7 +18,11 @@ Simple Desc : It  is my process of learning springboot ...
 
 #### Introduction Project
 
-*  01-init -> [Init Project]()
+*  01-init -> [Init Project](https://github.com/langzi1949/springboot-tw/blob/master/springboot-tw-01-init/README.md)
+
+#### Project Configuration
+
+* 02-01-multienv -> [Use Multi Env]()
 
 
 

@@ -12,10 +12,10 @@ import org.springframework.context.ApplicationListener;
  * @date 2019/4/28 18:11
  **/
 @Slf4j
-public class ApplicationPreEventListener implements ApplicationListener<ApplicationEnvironmentPreparedEvent> {
+public class ApplicationEnvPreEventListener implements ApplicationListener<ApplicationEnvironmentPreparedEvent> {
 
     @Override
     public void onApplicationEvent(ApplicationEnvironmentPreparedEvent event) {
-        log.info("#####ApplicationPreEvent#####");
+        log.info("#####ApplicationEnvPreEvent#####");
     }
 }

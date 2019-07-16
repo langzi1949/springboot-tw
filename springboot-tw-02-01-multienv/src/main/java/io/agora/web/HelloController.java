@@ -1,4 +1,4 @@
-package com.zmglove.web;
+package io.agora.web;
 
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;

@@ -1,6 +1,7 @@
 buildscript {
     ext {
         springBootVersion = '2.0.3.RELEASE'
+        tomcatEmbedVersion = '9.0.19'
         secrity ='fj'
         nexusUri = 'http://maven.h'+secrity+'y.red:8081'
     }
@@ -20,8 +21,9 @@ apply plugin: 'java'
 apply plugin: 'io.spring.dependency-management'
 apply plugin: 'maven'
 apply plugin: 'idea'
+apply plugin: 'org.springframework.boot'
 
-group = 'com.zmglove'
+group = 'io.agora'
 version = '0.0.1-SNAPSHOT'
 
 sourceCompatibility = '1.8'
@@ -32,6 +34,15 @@ repositories {
     mavenLocal()
     maven {
         url "${nexusUri}/nexus/content/groups/public/"
+    }
+}
+
+jar {
+    baseName = 'demo1'
+    version = '0.0.1-SNAPSHOT'
+    manifest {
+        attributes "Manifest-Version": 1.0,
+                'Main-Class' :'io.agora.Application'
     }
 }
 
@@ -65,4 +76,9 @@ dependencies {
     testAnnotationProcessor 'org.projectlombok:lombok:1.18.2'
     testCompile 'org.projectlombok:lombok:1.18.2'
     testCompile "org.springframework.boot:spring-boot-starter-test:${springBootVersion}"
+    compile "org.apache.tomcat.embed:tomcat-embed-core:${tomcatEmbedVersion}"
+    compile "org.apache.tomcat.embed:tomcat-embed-el:${tomcatEmbedVersion}"
+    compile "org.apache.tomcat.embed:tomcat-embed-websocket:${tomcatEmbedVersion}"
+    compile "com.alibaba:fastjson:1.2.39"
+    compile "com.hfjy.thirdparty:agora-sdk:1.0.2-RELEASE"
 }

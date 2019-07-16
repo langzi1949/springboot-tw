@@ -1,7 +1,7 @@
-package com.zmglove.web;
+package io.agora.web;
 
-import com.zmglove.Application;
-import com.zmglove.service.Apiproperties;
+import io.agora.Application;
+import io.agora.service.Apiproperties;
 import lombok.extern.slf4j.Slf4j;
 import org.hamcrest.Matchers;
 import org.junit.Assert;

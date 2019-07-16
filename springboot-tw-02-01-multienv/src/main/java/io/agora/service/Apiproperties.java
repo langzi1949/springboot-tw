@@ -1,4 +1,4 @@
-package com.zmglove.service;
+package io.agora.service;
 
 import lombok.Data;
 import org.springframework.beans.factory.annotation.Value;

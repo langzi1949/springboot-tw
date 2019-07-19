@@ -2,6 +2,7 @@ package com.zmglove.web;
 
 import com.zmglove.Application;
 import com.zmglove.config.StudentApiConfig;
+import com.zmglove.service.MergeMp4Service;
 import lombok.extern.slf4j.Slf4j;
 import org.hamcrest.Matchers;
 import org.junit.Assert;
@@ -18,6 +19,10 @@ import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 import org.springframework.test.web.servlet.result.MockMvcResultMatchers;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
+
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
 
 /**
@@ -37,6 +42,9 @@ public class ApplicationTest {
     @Autowired
     private StudentApiConfig studentApiConfig;
 
+    @Autowired
+    private MergeMp4Service mergeMp4Service;
+
 
     @Before
     public void setUp() throws Exception{
@@ -55,6 +63,22 @@ public class ApplicationTest {
         Assert.assertEquals("zmglove-学生的服务接口",studentApiConfig.getDesc());
 
         log.info("获取的随机字符串为: {}",studentApiConfig.getValue());
+    }
+
+    @Test
+    public void mergeVideo(){
+        List<String>  urls  = new ArrayList<>();
+
+        for(int i=1;i<=16;i++){
+            urls.add("G:\\vido\\a"+i+".mp4");
+        }
+
+
+        try {
+            mergeMp4Service.videoMerge(urls,"G:\\merge\\");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
 }

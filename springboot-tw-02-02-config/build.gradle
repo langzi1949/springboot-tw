@@ -82,4 +82,5 @@ dependencies {
     compile "com.alibaba:fastjson:1.2.39"
     compile "com.hfjy.thirdparty:agora-sdk:1.3-SNAPSHOT"
     compile 'org.mp4parser:muxer:1.9.27'
+    compile 'ws.schild:jave-core:2.4.4'
 }

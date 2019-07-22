@@ -3,6 +3,7 @@ package com.zmglove.web;
 import com.zmglove.Application;
 import com.zmglove.config.StudentApiConfig;
 import com.zmglove.service.MergeMp4Service;
+import com.zmglove.service.Mp4Service;
 import lombok.extern.slf4j.Slf4j;
 import org.hamcrest.Matchers;
 import org.junit.Assert;
@@ -19,6 +20,7 @@ import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 import org.springframework.test.web.servlet.result.MockMvcResultMatchers;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
+import ws.schild.jave.EncoderException;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -44,6 +46,9 @@ public class ApplicationTest {
 
     @Autowired
     private MergeMp4Service mergeMp4Service;
+
+    @Autowired
+    private Mp4Service mp4Service;
 
 
     @Before
@@ -79,6 +84,11 @@ public class ApplicationTest {
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
+
+    @Test
+    public void getVideoTime() throws EncoderException {
+        mp4Service.getTime("G:\\merge\\mergeOutput2.mp4");
     }
 
 }

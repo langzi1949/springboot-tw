@@ -57,4 +57,13 @@ public class RecordingService {
         accessToken.addPrivilege(AccessToken.Privileges.kJoinChannel,expireSconds);
         return accessToken.build();
     }
+
+    public String closeChannel(String channelId) {
+        log.info("停止录制...{}", channelId);
+        RecordingSample recordingSample = beanFactory.getBean(RecordingSample.class);
+        RecordingSDK recordingSdk = new RecordingSDK();
+        recordingSample.setRecordingSDKInstance(recordingSdk);
+        recordingSample.stopService(Long.valueOf(channelId));
+        return "SUCCESS";
+    }
 }

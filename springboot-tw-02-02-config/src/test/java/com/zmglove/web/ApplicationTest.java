@@ -86,9 +86,9 @@ public class ApplicationTest {
         }
     }
 
-    @Test
-    public void getVideoTime() throws EncoderException {
-        mp4Service.getTime("G:\\merge\\mergeOutput2.mp4");
-    }
+//    @Test
+//    public void getVideoTime() throws EncoderException {
+//        mp4Service.getTime("G:\\merge\\mergeOutput2.mp4");
+//    }
 
 }

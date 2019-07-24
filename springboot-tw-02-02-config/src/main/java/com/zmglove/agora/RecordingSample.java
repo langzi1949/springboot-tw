@@ -10,7 +10,6 @@ import io.agora.recording.common.RecordingEngineProperties;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Scope;
-import org.springframework.context.annotation.ScopedProxyMode;
 import org.springframework.stereotype.Service;
 
 import java.io.FileNotFoundException;
@@ -92,6 +91,7 @@ public class RecordingSample implements RecordingEventHandler {
     }
 
     public void nativeObjectRef(long nativeHandle) {
+        System.out.println("\n\n\n nativeHandle的值为"+nativeHandle);
         mNativeHandle = nativeHandle;
     }
 
@@ -344,8 +344,9 @@ public class RecordingSample implements RecordingEventHandler {
             return -1;
 
         layout.canvasHeight = height;
-        layout.canvasWidth = width;
-        layout.backgroundColor = "#23b9dc";
+        layout.canvasWidth = width ;
+        System.out.println("\ncanvasHeight = "+layout.canvasHeight+",canvasWidth"+layout.canvasWidth);
+        layout.backgroundColor = "#D77690";
         layout.regionCount = (int) (m_peers.size());
 
         if (!m_peers.isEmpty()) {
@@ -383,7 +384,7 @@ public class RecordingSample implements RecordingEventHandler {
 
     private void adjustBestFitVideoLayout(VideoMixingLayout.Region[] regionList, VideoMixingLayout layout) {
         if(m_peers.size() == 1) {
-            adjustBestFitLayout_Square(regionList,1, layout);
+            adjustBestFitLayout_2(regionList, layout);
         }else if(m_peers.size() == 2) {
             adjustBestFitLayout_2(regionList, layout);
         }else if( 2 < m_peers.size() && m_peers.size() <=4) {
@@ -400,22 +401,23 @@ public class RecordingSample implements RecordingEventHandler {
     }
 
     private void adjustBestFitLayout_2(VideoMixingLayout.Region[] regionList, VideoMixingLayout layout) {
-        float canvasWidth = (float)width;
-        float canvasHeight = (float)height;
-        float viewWidth = 0.235f;
-        float viewHEdge = 0.012f;
-        float viewHeight = viewWidth * (canvasWidth/canvasHeight);
-        float viewVEdge = viewHEdge * (canvasWidth/canvasHeight);
+//        float canvasWidth = (float)width;
+//        float canvasHeight = (float)height *2;
+//        float viewWidth = 0.235f;
+//        float viewHEdge = 0.012f;
+//        float viewHeight = viewWidth * (canvasWidth/canvasHeight);
+//        float viewVEdge = viewHEdge * (canvasWidth/canvasHeight);
         int peersCount = m_peers.size();
         for (int i=0; i < peersCount; i++) {
             regionList[i] = layout.new Region();
             regionList[i].uid = m_peers.get(i);
-            regionList[i].x = (((i+1)%2) == 0) ?0:0.5;
-            regionList[i].y =  0.f;
-            regionList[i].width = 0.5f;
-            regionList[i].height = 1.f;
+            regionList[i].x =  0.f;
+            regionList[i].y = (((i+1)%2) == 0) ?0:0.5;
+            regionList[i].width = 1.f;
+            regionList[i].height = 0.5f;
             regionList[i].alpha = i+1;
-            regionList[i].renderMode = 0;
+            // 采用缩放的策略
+            regionList[i].renderMode = 1;
         }
     }
     private void adjustDefaultVideoLayout(VideoMixingLayout.Region[] regionList, VideoMixingLayout layout) {

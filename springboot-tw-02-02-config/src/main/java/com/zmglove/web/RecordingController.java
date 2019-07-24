@@ -5,10 +5,7 @@ import com.zmglove.service.RecordingService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 /**
  * TODO
@@ -27,5 +24,10 @@ public class RecordingController {
     @PostMapping(value = "/create")
     public String createRecording(@RequestBody AgoraChannel channel) throws Exception{
         return recordingService.createRecording(channel);
+    }
+
+    @GetMapping(value = "/close/{channelId}")
+    public String closeChannel(@PathVariable String channelId) throws Exception{
+        return recordingService.closeChannel(channelId);
     }
 }

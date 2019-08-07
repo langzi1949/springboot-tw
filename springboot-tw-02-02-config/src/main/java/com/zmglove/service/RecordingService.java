@@ -63,7 +63,7 @@ public class RecordingService {
         RecordingSample recordingSample = beanFactory.getBean(RecordingSample.class);
         RecordingSDK recordingSdk = new RecordingSDK();
         recordingSample.setRecordingSDKInstance(recordingSdk);
-        recordingSample.stopService(Long.valueOf(channelId));
+        recordingSample.leaveChannel(Long.valueOf(channelId));
         return "SUCCESS";
     }
 }

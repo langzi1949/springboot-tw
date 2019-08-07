@@ -34,7 +34,7 @@ public class RecordingCallService {
                 "--idle","3",
                 "--triggerMode","0",
                 "--lowUdpPort","40000",
-                "--highUdpPort","40100",
+                "--highUdpPort","41000",
                 };
         recordingSample.createChannel(args);
         recordingSample.unRegister();

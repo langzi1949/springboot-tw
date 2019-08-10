@@ -8,7 +8,7 @@ package com.zmglove.util;
  * @date 2019/7/17 9:55
  **/
 public class Consts {
-    public static final String appId = "44ded3b44a3449178a2f8721620d69b6";
+    public static final String appId = "bab8c031466245c5aea9bbf1da75636f";
 
-    public static final String certificate = "b75f55b032c24aed84934b948f90a7e5";
+    public static final String certificate = "27174615f94d4609b2bbafddc4ded297";
 }

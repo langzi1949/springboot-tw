@@ -25,7 +25,8 @@ public class RecordingCallService {
 
         RecordingSDK recordingSdk = new RecordingSDK();
         recordingSample.setRecordingSDKInstance(recordingSdk);
-        String[] args = new String[]{"--appId", Consts.appId,"--channelKey",channel.getToken(),"--uid","0","--channel",channel.getName(),"--appliteDir","/opt/agora/Agora_Recording/bin",
+        log.info(">>>>>callAgora:Instance实例hashCode :{}",recordingSample.hashCode());
+        String[] args = new String[]{"--appId", Consts.appId,"--channelKey",channel.getToken(),"--uid","10010","--channel",channel.getName(),"--appliteDir","/opt/agora/Agora_Recording/bin",
                 "--hfjyChannel",String.valueOf(channel.getId()),
                 "--isMixingEnabled","1",
                 "--mixResolution","320,480,15,200",

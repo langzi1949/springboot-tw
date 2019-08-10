@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <configuration scan="true" scanPeriod="60 seconds">
 
-    <property name="LOG_HOME" value="/opt/czh/logs/"/>
+    <property name="LOG_HOME" value="/Users/langzi/nami/open-source/springboot-tw/springboot-tw-02-02-config/logs/"/>
     <property name="APP_NAME" value="agora-service"/>
 
     <include resource="org/springframework/boot/logging/logback/defaults.xml" />

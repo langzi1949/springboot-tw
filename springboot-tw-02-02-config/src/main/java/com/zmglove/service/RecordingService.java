@@ -3,16 +3,11 @@ package com.zmglove.service;
 import com.alibaba.fastjson.JSON;
 import com.zmglove.agora.RecordingSample;
 import com.zmglove.model.AgoraChannel;
-import com.zmglove.util.Consts;
-import io.agora.media.AccessToken;
 import io.agora.recording.RecordingSDK;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.BeanFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.scheduling.annotation.Async;
 import org.springframework.stereotype.Service;
-
-import javax.annotation.Resource;
 
 /**
  * TODO
@@ -49,20 +44,21 @@ public class RecordingService {
         return JSON.toJSONString(channel);
     }
 
-    private String getToken(String appId,String certificate,String channelName,String uid) throws Exception {
-        // 基于Agora 声网API生成token
-        int expireSconds = (int)System.currentTimeMillis()/100 +60*60;
-
-        AccessToken accessToken = new AccessToken(appId,certificate,channelName,uid);
-        accessToken.addPrivilege(AccessToken.Privileges.kJoinChannel,expireSconds);
-        return accessToken.build();
-    }
+//    private String getToken(String appId,String certificate,String channelName,String uid) throws Exception {
+//        // 基于Agora 声网API生成token
+//        int expireSconds = (int)System.currentTimeMillis()/100 +60*60;
+//
+//        AccessToken accessToken = new AccessToken(appId,certificate,channelName,uid);
+//        accessToken.addPrivilege(AccessToken.Privileges.kJoinChannel,expireSconds);
+//        return accessToken.build();
+//    }
 
     public String closeChannel(String channelId) {
         log.info("停止录制...{}", channelId);
         RecordingSample recordingSample = beanFactory.getBean(RecordingSample.class);
         RecordingSDK recordingSdk = new RecordingSDK();
         recordingSample.setRecordingSDKInstance(recordingSdk);
+        log.info(">>>>>closeChannel:Instance实例hashCode :{}",recordingSample.hashCode());
         recordingSample.leaveChannel(Long.valueOf(channelId));
         return "SUCCESS";
     }

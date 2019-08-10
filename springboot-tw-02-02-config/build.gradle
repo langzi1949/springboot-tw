@@ -3,7 +3,7 @@ buildscript {
         springBootVersion = '2.0.3.RELEASE'
         tomcatEmbedVersion = '9.0.19'
         secrity ='fj'
-        nexusUri = 'http://maven.h'+secrity+'y.red:8081'
+        nexusUri = 'http://112.65.233.109:8081'
     }
     repositories {
         mavenLocal()
@@ -80,7 +80,7 @@ dependencies {
     compile "org.apache.tomcat.embed:tomcat-embed-el:${tomcatEmbedVersion}"
     compile "org.apache.tomcat.embed:tomcat-embed-websocket:${tomcatEmbedVersion}"
     compile "com.alibaba:fastjson:1.2.39"
-    compile "com.hfjy.thirdparty:agora-sdk:1.3-SNAPSHOT"
+    //compile "com.hfjy.thirdparty:agora-sdk:1.3-SNAPSHOT"
     compile 'org.mp4parser:muxer:1.9.27'
     compile 'ws.schild:jave-core:2.4.4'
 }

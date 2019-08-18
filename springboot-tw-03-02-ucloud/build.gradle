@@ -84,4 +84,5 @@ dependencies {
     compile 'org.mp4parser:muxer:1.9.27'
     compile 'ws.schild:jave-core:2.4.4'
     compile 'cn.ucloud.ufile:ufile-client-java:2.1.1'
+    compile 'cn.hutool:hutool-all:4.6.2'
 }

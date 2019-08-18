@@ -1,11 +1,9 @@
 package com.zmglove.web;
 
-import cn.ucloud.ufile.exception.UfileClientException;
-import cn.ucloud.ufile.exception.UfileServerException;
+import cn.hutool.core.io.FileUtil;
 import com.zmglove.Application;
 import com.zmglove.service.MergeMp4Service;
 import com.zmglove.service.Mp4Service;
-import com.zmglove.util.UFileUtil;
 import lombok.extern.slf4j.Slf4j;
 import org.hamcrest.Matchers;
 import org.junit.Before;
@@ -21,6 +19,9 @@ import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 import org.springframework.test.web.servlet.result.MockMvcResultMatchers;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
+
+import java.util.ArrayList;
+import java.util.List;
 
 
 /**
@@ -66,33 +67,33 @@ public class ApplicationTest {
 ////        log.info("获取的随机字符串为: {}",studentApiConfig.getValue());
 //    }
 
-//    @Test
-//    public void mergeVideo(){
-//        List<String>  urls  = new ArrayList<>();
-//
-//        for(int i=1;i<=16;i++){
-//            urls.add("G:\\vido\\a"+i+".mp4");
-//        }
-//
-//
-//        try {
-//            mergeMp4Service.videoMerge(urls,"G:\\merge\\");
-//        } catch (IOException e) {
-//            e.printStackTrace();
-//        }
-//    }
+    @Test
+    public void mergeVideo(){
+        List<String> urls  = new ArrayList<>();
+
+        urls.add("/Users/langzi/Desktop/test/10001.mp4");
+
+
+        try {
+            mergeMp4Service.videoMerge(urls,"/Users/langzi/Desktop/test/merge");
+            // 删除文件
+            FileUtil.del(urls.get(0));
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
 
 //    @Test
 //    public void getVideoTime() throws EncoderException {
 //        mp4Service.getTime("G:\\merge\\mergeOutput2.mp4");
 //    }
 
-    @Test
-    public void ufileTest() throws UfileServerException, UfileClientException {
-        UFileUtil fileUtil = new UFileUtil("TOKEN_b5daa53f-0e97-49df-a88e-109cdba92545",
-                "6567ebc3-8218-42b1-9f4a-12bc0084a1a1");
-        fileUtil.upload("/Users/langzi/Desktop/10001.mp4");
-
-    }
+//    @Test
+//    public void ufileTest() throws UfileServerException, UfileClientException {
+//        UFileUtil fileUtil = new UFileUtil("TOKEN_b5daa53f-0e97-49df-a88e-109cdba92545",
+//                "6567ebc3-8218-42b1-9f4a-12bc0084a1a1");
+//        fileUtil.upload("/Users/langzi/Desktop/10001.mp4");
+//
+//    }
 
 }

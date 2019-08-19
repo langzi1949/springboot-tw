@@ -1,9 +1,12 @@
 package com.zmglove.web;
 
 import cn.hutool.core.io.FileUtil;
+import cn.ucloud.ufile.exception.UfileClientException;
+import cn.ucloud.ufile.exception.UfileServerException;
 import com.zmglove.Application;
 import com.zmglove.service.MergeMp4Service;
 import com.zmglove.service.Mp4Service;
+import com.zmglove.util.UFileUtil;
 import lombok.extern.slf4j.Slf4j;
 import org.hamcrest.Matchers;
 import org.junit.Before;
@@ -95,5 +98,13 @@ public class ApplicationTest {
 //        fileUtil.upload("/Users/langzi/Desktop/10001.mp4");
 //
 //    }
+
+
+    @Test
+    public void uFileMultiUploadTest() throws UfileServerException, UfileClientException {
+        UFileUtil fileUtil = new UFileUtil("TOKEN_b5daa53f-0e97-49df-a88e-109cdba92545",
+                "6567ebc3-8218-42b1-9f4a-12bc0084a1a1");
+        fileUtil.multiUpload("/Users/langzi/Desktop/10001.mp4");
+    }
 
 }

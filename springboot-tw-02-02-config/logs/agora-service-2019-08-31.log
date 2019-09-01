@@ -1,0 +1,49 @@
+2019-08-31 20:27:18.240 [Test worker] INFO  com.zmglove.web.ApplicationTest - Starting ApplicationTest on langzideMacBook-Pro.local with PID 5259 (started by langzi in /Users/langzi/nami/open-source/springboot-tw/springboot-tw-04-01-activemq)
+2019-08-31 20:27:18.242 [Test worker] INFO  com.zmglove.web.ApplicationTest - The following profiles are active: dev
+2019-08-31 20:27:18.339 [Test worker] INFO  o.s.w.context.support.GenericWebApplicationContext - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@879ea7b: startup date [Sat Aug 31 20:27:18 CST 2019]; root of context hierarchy
+2019-08-31 20:27:19.688 [Test worker] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService  'threadPoolTaskExecutor'
+2019-08-31 20:27:20.126 [Test worker] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-08-31 20:27:20.374 [Test worker] INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@879ea7b: startup date [Sat Aug 31 20:27:18 CST 2019]; root of context hierarchy
+2019-08-31 20:27:20.459 [Test worker] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/hello]}" onto public java.lang.String com.zmglove.web.HelloController.index()
+2019-08-31 20:27:20.465 [Test worker] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2019-08-31 20:27:20.466 [Test worker] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-08-31 20:27:20.499 [Test worker] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-08-31 20:27:20.499 [Test worker] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-08-31 20:27:20.874 [Test worker] INFO  o.s.context.support.DefaultLifecycleProcessor - Starting beans in phase 2147483647
+2019-08-31 20:27:21.214 [Test worker] INFO  com.zmglove.web.ApplicationTest - Started ApplicationTest in 3.667 seconds (JVM running for 4.891)
+2019-08-31 20:27:21.379 [Test worker] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/hello]}" onto public java.lang.String com.zmglove.web.HelloController.index()
+2019-08-31 20:27:21.394 [Test worker] INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.test.web.servlet.setup.StubWebApplicationContext@25a3c064
+2019-08-31 20:27:21.402 [Test worker] INFO  org.springframework.mock.web.MockServletContext - Initializing Spring FrameworkServlet ''
+2019-08-31 20:27:21.403 [Test worker] INFO  o.s.test.web.servlet.TestDispatcherServlet - FrameworkServlet '': initialization started
+2019-08-31 20:27:21.405 [Test worker] INFO  o.s.test.web.servlet.TestDispatcherServlet - FrameworkServlet '': initialization completed in 1 ms
+2019-08-31 20:27:21.500 [DefaultMessageListenerContainer-1] INFO  com.zmglove.mq.service.QueueReceiveService - >>>>>> 消费者接收到的消息:kobe is best
+2019-08-31 20:27:21.582 [Test worker] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/hello]}" onto public java.lang.String com.zmglove.web.HelloController.index()
+2019-08-31 20:27:21.599 [Test worker] INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.test.web.servlet.setup.StubWebApplicationContext@7bb87eb0
+2019-08-31 20:27:21.602 [Test worker] INFO  org.springframework.mock.web.MockServletContext - Initializing Spring FrameworkServlet ''
+2019-08-31 20:27:21.602 [Test worker] INFO  o.s.test.web.servlet.TestDispatcherServlet - FrameworkServlet '': initialization started
+2019-08-31 20:27:21.603 [Test worker] INFO  o.s.test.web.servlet.TestDispatcherServlet - FrameworkServlet '': initialization completed in 0 ms
+2019-08-31 20:27:21.695 [Thread-7] INFO  o.s.w.context.support.GenericWebApplicationContext - Closing org.springframework.web.context.support.GenericWebApplicationContext@879ea7b: startup date [Sat Aug 31 20:27:18 CST 2019]; root of context hierarchy
+2019-08-31 20:27:21.698 [Thread-7] INFO  o.s.context.support.DefaultLifecycleProcessor - Stopping beans in phase 2147483647
+2019-08-31 20:27:22.633 [Thread-7] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'threadPoolTaskExecutor'
+2019-08-31 20:30:16.142 [main] INFO  com.zmglove.web.ApplicationTest - Starting ApplicationTest on langzideMacBook-Pro.local with PID 5300 (started by langzi in /Users/langzi/nami/open-source/springboot-tw/springboot-tw-04-01-activemq)
+2019-08-31 20:30:16.144 [main] INFO  com.zmglove.web.ApplicationTest - The following profiles are active: dev
+2019-08-31 20:30:16.360 [main] INFO  o.s.w.context.support.GenericWebApplicationContext - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@76494737: startup date [Sat Aug 31 20:30:16 CST 2019]; root of context hierarchy
+2019-08-31 20:30:18.336 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService  'threadPoolTaskExecutor'
+2019-08-31 20:30:18.691 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-08-31 20:30:18.931 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@76494737: startup date [Sat Aug 31 20:30:16 CST 2019]; root of context hierarchy
+2019-08-31 20:30:19.008 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/hello]}" onto public java.lang.String com.zmglove.web.HelloController.index()
+2019-08-31 20:30:19.012 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2019-08-31 20:30:19.013 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-08-31 20:30:19.047 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-08-31 20:30:19.048 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-08-31 20:30:19.420 [main] INFO  o.s.context.support.DefaultLifecycleProcessor - Starting beans in phase 2147483647
+2019-08-31 20:30:19.795 [main] INFO  com.zmglove.web.ApplicationTest - Started ApplicationTest in 4.701 seconds (JVM running for 6.396)
+2019-08-31 20:30:19.984 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/hello]}" onto public java.lang.String com.zmglove.web.HelloController.index()
+2019-08-31 20:30:20.002 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.test.web.servlet.setup.StubWebApplicationContext@58ec7116
+2019-08-31 20:30:20.010 [main] INFO  org.springframework.mock.web.MockServletContext - Initializing Spring FrameworkServlet ''
+2019-08-31 20:30:20.010 [main] INFO  o.s.test.web.servlet.TestDispatcherServlet - FrameworkServlet '': initialization started
+2019-08-31 20:30:20.011 [main] INFO  o.s.test.web.servlet.TestDispatcherServlet - FrameworkServlet '': initialization completed in 0 ms
+2019-08-31 20:30:20.088 [DefaultMessageListenerContainer-1] INFO  com.zmglove.mq.service.QueueReceiveService - >>>>>> 消费者接收到的消息:kobe is best
+2019-08-31 20:30:20.159 [Thread-4] INFO  o.s.w.context.support.GenericWebApplicationContext - Closing org.springframework.web.context.support.GenericWebApplicationContext@76494737: startup date [Sat Aug 31 20:30:16 CST 2019]; root of context hierarchy
+2019-08-31 20:30:20.162 [Thread-4] INFO  o.s.context.support.DefaultLifecycleProcessor - Stopping beans in phase 2147483647
+2019-08-31 20:30:20.202 [Thread-4] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'threadPoolTaskExecutor'

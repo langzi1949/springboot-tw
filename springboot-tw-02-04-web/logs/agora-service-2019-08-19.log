@@ -1,0 +1,49 @@
+2019-08-19 21:55:57.264 [Test worker] INFO  com.zmglove.web.ApplicationTest - Starting ApplicationTest on langzideMacBook-Pro.local with PID 20995 (started by langzi in /Users/langzi/nami/open-source/springboot-tw/springboot-tw-03-02-ucloud)
+2019-08-19 21:55:57.269 [Test worker] INFO  com.zmglove.web.ApplicationTest - The following profiles are active: dev
+2019-08-19 21:55:57.335 [Test worker] INFO  o.s.w.context.support.GenericWebApplicationContext - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@698b4b44: startup date [Mon Aug 19 21:55:57 CST 2019]; root of context hierarchy
+2019-08-19 21:55:58.289 [Test worker] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService  'threadPoolTaskExecutor'
+2019-08-19 21:55:58.654 [Test worker] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-08-19 21:55:58.880 [Test worker] INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@698b4b44: startup date [Mon Aug 19 21:55:57 CST 2019]; root of context hierarchy
+2019-08-19 21:55:58.957 [Test worker] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/hello]}" onto public java.lang.String com.zmglove.web.HelloController.index()
+2019-08-19 21:55:58.967 [Test worker] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/recording/create],methods=[POST],produces=[application/json;charset=UTF-8]}" onto public java.lang.String com.zmglove.web.RecordingController.createRecording(com.zmglove.model.AgoraChannel) throws java.lang.Exception
+2019-08-19 21:55:58.969 [Test worker] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/recording/close/{channelId}],methods=[GET],produces=[application/json;charset=UTF-8]}" onto public java.lang.String com.zmglove.web.RecordingController.closeChannel(java.lang.String) throws java.lang.Exception
+2019-08-19 21:55:58.972 [Test worker] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2019-08-19 21:55:58.973 [Test worker] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-08-19 21:55:59.005 [Test worker] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-08-19 21:55:59.006 [Test worker] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-08-19 21:55:59.349 [Test worker] INFO  com.zmglove.web.ApplicationTest - Started ApplicationTest in 22.461 seconds (JVM running for 23.528)
+2019-08-19 21:55:59.503 [Test worker] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/hello]}" onto public java.lang.String com.zmglove.web.HelloController.index()
+2019-08-19 21:55:59.519 [Test worker] INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.test.web.servlet.setup.StubWebApplicationContext@244528ff
+2019-08-19 21:55:59.526 [Test worker] INFO  org.springframework.mock.web.MockServletContext - Initializing Spring FrameworkServlet ''
+2019-08-19 21:55:59.527 [Test worker] INFO  o.s.test.web.servlet.TestDispatcherServlet - FrameworkServlet '': initialization started
+2019-08-19 21:55:59.528 [Test worker] INFO  o.s.test.web.servlet.TestDispatcherServlet - FrameworkServlet '': initialization completed in 0 ms
+2019-08-19 21:55:59.543 [Test worker] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/hello]}" onto public java.lang.String com.zmglove.web.HelloController.index()
+2019-08-19 21:55:59.556 [Test worker] INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.test.web.servlet.setup.StubWebApplicationContext@99d4e87
+2019-08-19 21:55:59.562 [Test worker] INFO  org.springframework.mock.web.MockServletContext - Initializing Spring FrameworkServlet ''
+2019-08-19 21:55:59.563 [Test worker] INFO  o.s.test.web.servlet.TestDispatcherServlet - FrameworkServlet '': initialization started
+2019-08-19 21:55:59.563 [Test worker] INFO  o.s.test.web.servlet.TestDispatcherServlet - FrameworkServlet '': initialization completed in 0 ms
+2019-08-19 21:55:59.585 [Test worker] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/hello]}" onto public java.lang.String com.zmglove.web.HelloController.index()
+2019-08-19 21:55:59.599 [Test worker] INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.test.web.servlet.setup.StubWebApplicationContext@1f2bb0b1
+2019-08-19 21:55:59.602 [Test worker] INFO  org.springframework.mock.web.MockServletContext - Initializing Spring FrameworkServlet ''
+2019-08-19 21:55:59.602 [Test worker] INFO  o.s.test.web.servlet.TestDispatcherServlet - FrameworkServlet '': initialization started
+2019-08-19 21:55:59.603 [Test worker] INFO  o.s.test.web.servlet.TestDispatcherServlet - FrameworkServlet '': initialization completed in 0 ms
+2019-08-19 21:57:07.258 [main] INFO  com.zmglove.web.ApplicationTest - Starting ApplicationTest on langzideMacBook-Pro.local with PID 21012 (started by langzi in /Users/langzi/nami/open-source/springboot-tw/springboot-tw-03-02-ucloud)
+2019-08-19 21:57:07.264 [main] INFO  com.zmglove.web.ApplicationTest - The following profiles are active: dev
+2019-08-19 21:57:07.364 [main] INFO  o.s.w.context.support.GenericWebApplicationContext - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@56a4479a: startup date [Mon Aug 19 21:57:07 CST 2019]; root of context hierarchy
+2019-08-19 21:57:08.786 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService  'threadPoolTaskExecutor'
+2019-08-19 21:57:09.239 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-08-19 21:57:09.532 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@56a4479a: startup date [Mon Aug 19 21:57:07 CST 2019]; root of context hierarchy
+2019-08-19 21:57:09.642 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/hello]}" onto public java.lang.String com.zmglove.web.HelloController.index()
+2019-08-19 21:57:09.650 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/recording/create],methods=[POST],produces=[application/json;charset=UTF-8]}" onto public java.lang.String com.zmglove.web.RecordingController.createRecording(com.zmglove.model.AgoraChannel) throws java.lang.Exception
+2019-08-19 21:57:09.651 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/recording/close/{channelId}],methods=[GET],produces=[application/json;charset=UTF-8]}" onto public java.lang.String com.zmglove.web.RecordingController.closeChannel(java.lang.String) throws java.lang.Exception
+2019-08-19 21:57:09.654 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2019-08-19 21:57:09.655 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-08-19 21:57:09.704 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-08-19 21:57:09.704 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-08-19 21:57:10.116 [main] INFO  com.zmglove.web.ApplicationTest - Started ApplicationTest in 23.349 seconds (JVM running for 24.536)
+2019-08-19 21:57:10.401 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/hello]}" onto public java.lang.String com.zmglove.web.HelloController.index()
+2019-08-19 21:57:10.423 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.test.web.servlet.setup.StubWebApplicationContext@4fc5563d
+2019-08-19 21:57:10.434 [main] INFO  org.springframework.mock.web.MockServletContext - Initializing Spring FrameworkServlet ''
+2019-08-19 21:57:10.434 [main] INFO  o.s.test.web.servlet.TestDispatcherServlet - FrameworkServlet '': initialization started
+2019-08-19 21:57:10.435 [main] INFO  o.s.test.web.servlet.TestDispatcherServlet - FrameworkServlet '': initialization completed in 0 ms
+2019-08-19 21:57:40.563 [Thread-2] INFO  o.s.w.context.support.GenericWebApplicationContext - Closing org.springframework.web.context.support.GenericWebApplicationContext@56a4479a: startup date [Mon Aug 19 21:57:07 CST 2019]; root of context hierarchy

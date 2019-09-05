@@ -1,14 +1,11 @@
 package com.zmglove.web;
 
 import com.zmglove.Application;
-import com.zmglove.mq.service.QueueSendService;
-import com.zmglove.mq.service.topic.TopicSendService;
 import lombok.extern.slf4j.Slf4j;
 import org.hamcrest.Matchers;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.http.MediaType;
 import org.springframework.mock.web.MockServletContext;
@@ -32,18 +29,11 @@ import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 @WebAppConfiguration
 @Slf4j
 public class ApplicationTest {
-    private MockMvc mockMvc;
-
-    @Autowired
-    private QueueSendService queueSendService;
-
-    @Autowired
-    private TopicSendService topicSendService;
-
+    public  MockMvc mockMvc;
 
     @Before
     public void setUp() throws Exception{
-        mockMvc = MockMvcBuilders.standaloneSetup(new HelloController()).build();
+        mockMvc = MockMvcBuilders.standaloneSetup(new HelloController(),new UserController()).build();
     }
 
     @Test
@@ -51,12 +41,6 @@ public class ApplicationTest {
         mockMvc.perform(MockMvcRequestBuilders.get("/hello").accept(MediaType.APPLICATION_JSON_UTF8))
                 .andExpect(MockMvcResultMatchers.status().isOk())
                 .andExpect(MockMvcResultMatchers.content().string(Matchers.equalTo("Hello World")));
-    }
-
-    @Test
-    public void sendMessageTest() throws InterruptedException {
-        queueSendService.sendMessage("kobe is best");
-        Thread.sleep(10000);
     }
 
 }

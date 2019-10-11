@@ -1,5 +1,8 @@
 package com.zmglove.web.lock;
 
+import com.sun.media.jfxmedia.logging.Logger;
+import lombok.extern.slf4j.Slf4j;
+
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -13,6 +16,7 @@ import java.util.concurrent.TimeoutException;
  * @version 1.0
  * @date 2019/10/10 17:36
  **/
+@Slf4j
 public class BooleanLock implements Lock{
     // 当前拥有锁的线程
     private Thread currentThread;
@@ -51,6 +55,7 @@ public class BooleanLock implements Lock{
                 long remainingMills = mills;
                 long endMills = System.currentTimeMillis() + remainingMills;
                 while(locked){
+                    log.info("当前{}线程一直在尝试",Thread.currentThread().getName());
                     if (remainingMills <= 0) {
                         throw  new TimeoutException("不能获取锁:"+mills +"毫秒");
                     }

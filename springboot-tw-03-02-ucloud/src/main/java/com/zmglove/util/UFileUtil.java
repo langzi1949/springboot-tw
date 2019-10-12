@@ -53,7 +53,7 @@ public class UFileUtil {
         File file = new File(path);
         ObjectConfig config = new ObjectConfig("cn-sh2", "ufileos.com");
         MultiUploadInfo state = UfileClient.object(OBJECT_AUTHORIZER,config)
-                .initMultiUpload("/20190819/1003/james.mp4","video/mp4","zmg-media")
+                .initMultiUpload("/20190820/1004/james111.mp4","video/mp4","zmg-media")
                 .execute();
         if(state ==null){
             return;

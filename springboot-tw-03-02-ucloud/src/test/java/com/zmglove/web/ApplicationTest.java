@@ -70,21 +70,21 @@ public class ApplicationTest {
 ////        log.info("获取的随机字符串为: {}",studentApiConfig.getValue());
 //    }
 
-    @Test
-    public void mergeVideo(){
-        List<String> urls  = new ArrayList<>();
-
-        urls.add("/Users/langzi/Desktop/test/10001.mp4");
-
-
-        try {
-            mergeMp4Service.videoMerge(urls,"/Users/langzi/Desktop/test/merge");
-            // 删除文件
-            FileUtil.del(urls.get(0));
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
+//    @Test
+//    public void mergeVideo(){
+//        List<String> urls  = new ArrayList<>();
+//
+//        urls.add("/Users/langzi/Desktop/test/10001.mp4");
+//
+//
+//        try {
+//            mergeMp4Service.videoMerge(urls,"/Users/langzi/Desktop/test/merge");
+//            // 删除文件
+//            FileUtil.del(urls.get(0));
+//        } catch (Exception e) {
+//            e.printStackTrace();
+//        }
+//    }
 
 //    @Test
 //    public void getVideoTime() throws EncoderException {
@@ -104,7 +104,7 @@ public class ApplicationTest {
     public void uFileMultiUploadTest() throws UfileServerException, UfileClientException {
         UFileUtil fileUtil = new UFileUtil("TOKEN_b5daa53f-0e97-49df-a88e-109cdba92545",
                 "6567ebc3-8218-42b1-9f4a-12bc0084a1a1");
-        fileUtil.multiUpload("/Users/langzi/Desktop/10001.mp4");
+        fileUtil.multiUpload("G:\\videos\\33.mp4");
     }
 
 }

@@ -1,0 +1,84 @@
+buildscript {
+    ext {
+        springBootVersion = '2.0.3.RELEASE'
+        tomcatEmbedVersion = '9.0.19'
+        secrity ='fj'
+        nexusUri = 'http://maven.h'+secrity+'y.red:8081'
+    }
+    repositories {
+        mavenLocal()
+        maven {
+            url "${nexusUri}/nexus/content/groups/public/"
+        }
+    }
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+        classpath("io.spring.gradle:dependency-management-plugin:1.0.5.RELEASE")
+    }
+}
+
+apply plugin: 'java'
+apply plugin: 'io.spring.dependency-management'
+apply plugin: 'maven'
+apply plugin: 'idea'
+apply plugin: 'org.springframework.boot'
+
+group = 'com.zmglove'
+version = '0.0.1-SNAPSHOT'
+
+sourceCompatibility = '1.8'
+targetCompatibility = 1.8
+
+repositories {
+    // 本地仓库
+    mavenLocal()
+    maven {
+        url "${nexusUri}/nexus/content/groups/public/"
+    }
+}
+
+jar {
+    baseName = 'demo1'
+    version = '0.0.1-SNAPSHOT'
+    manifest {
+        attributes "Manifest-Version": 1.0,
+                'Main-Class' :'com.zmglove.Application'
+    }
+}
+
+// 默认发布到release中
+def  nexusUrl = "${nexusUri}/nexus/content/repositories/releases/"
+//如果为快照版本发布到Maven Nexus私服的快照库
+if(version.endsWith("SNAPSHOT")){
+    nexusUrl = "${nexusUri}/nexus/content/repositories/snapshots/"
+}
+
+// 上传nexus资源配置
+uploadArchives{
+    repositories{
+        mavenDeployer{
+            //上传资源到Maven私服
+            repository(url:nexusUrl){
+                authentication(userName:"deployment",password:"deployment123")
+            }
+            pom.version ="$project.version"
+            pom.artifactId ="springboot-tw-01"
+            pom.groupId ="$project.group"
+        }
+    }
+}
+
+dependencies {
+    compile "org.springframework.boot:spring-boot-starter:${springBootVersion}"
+    compile "org.springframework.boot:spring-boot-starter-web:${springBootVersion}"
+    annotationProcessor 'org.projectlombok:lombok:1.18.2'
+    compile 'org.projectlombok:lombok:1.18.2'
+    testAnnotationProcessor 'org.projectlombok:lombok:1.18.2'
+    testCompile 'org.projectlombok:lombok:1.18.2'
+    testCompile "org.springframework.boot:spring-boot-starter-test:${springBootVersion}"
+    compile "org.apache.tomcat.embed:tomcat-embed-core:${tomcatEmbedVersion}"
+    compile "org.apache.tomcat.embed:tomcat-embed-el:${tomcatEmbedVersion}"
+    compile "org.apache.tomcat.embed:tomcat-embed-websocket:${tomcatEmbedVersion}"
+    compile "com.alibaba:fastjson:1.2.39"
+    compile 'cn.hutool:hutool-all:4.6.2'
+}

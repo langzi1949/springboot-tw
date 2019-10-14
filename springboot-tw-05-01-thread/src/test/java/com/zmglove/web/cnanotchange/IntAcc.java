@@ -57,7 +57,7 @@ public final class IntAcc {
 
     private static void slowly() {
         try {
-            TimeUnit.MILLISECONDS.sleep(1);
+            TimeUnit.MILLISECONDS.sleep(4);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }

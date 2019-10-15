@@ -5,7 +5,7 @@ import lombok.extern.slf4j.Slf4j;
 import java.util.concurrent.TimeUnit;
 
 /**
- * 测试
+ * 读写锁测试
  *
  * @author CZH
  * @version 1.0

@@ -4,9 +4,6 @@ import lombok.extern.slf4j.Slf4j;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Random;
-import java.util.concurrent.TimeUnit;
-import java.util.stream.IntStream;
 
 /**
  * 使用传统的wait-notify方式进行
@@ -16,38 +13,7 @@ import java.util.stream.IntStream;
  * @date 2019/10/16 14:17
  **/
 @Slf4j
-public class BlockDemo {
-
-    public static void main(String[] args){
-        MyBlockQueue<String> queue = new MyBlockQueue<>(5);
-
-        // 创建10个线程进行写入
-        IntStream.range(0, 10).mapToObj(i -> new Thread(() -> {
-            try {
-                TimeUnit.SECONDS.sleep(new Random().nextInt(10));
-                queue.put(String.valueOf(i));
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
-        }, "PUT-" + i)).forEach(Thread::start);
-
-        // 使用10个线程进行取值
-        IntStream.range(0, 3).mapToObj(i -> new Thread(() -> {
-            try {
-                TimeUnit.SECONDS.sleep(new Random().nextInt(10));
-                log.info("线程 [{}] 取值为------------>{}", Thread.currentThread().getName(), queue.take());
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
-        }, "GET-" + i)).forEach(Thread::start);
-    }
-
-
-}
-
-
-@Slf4j
-class MyBlockQueue<E> {
+public class MyBlockQueue<E> {
     // 首先定义一个list,用来存放数据
     private final List<E> list;
 

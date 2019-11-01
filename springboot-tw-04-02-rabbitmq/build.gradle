@@ -79,4 +79,6 @@ dependencies {
     compile "org.apache.tomcat.embed:tomcat-embed-el:${tomcatEmbedVersion}"
     compile "org.apache.tomcat.embed:tomcat-embed-websocket:${tomcatEmbedVersion}"
     compile "com.alibaba:fastjson:1.2.39"
+    compile "org.springframework.boot:spring-boot-starter-amqp:${springBootVersion}"
+
 }

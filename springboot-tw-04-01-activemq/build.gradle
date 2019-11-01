@@ -3,7 +3,7 @@ buildscript {
         springBootVersion = '2.0.3.RELEASE'
         tomcatEmbedVersion = '9.0.19'
         secrity ='fj'
-        nexusUri = 'http://112.65.233.109:8081'
+        nexusUri = 'http://maven.h'+secrity+'y.red:8081'
     }
     repositories {
         mavenLocal()
@@ -80,6 +80,6 @@ dependencies {
     compile "org.apache.tomcat.embed:tomcat-embed-el:${tomcatEmbedVersion}"
     compile "org.apache.tomcat.embed:tomcat-embed-websocket:${tomcatEmbedVersion}"
     compile "com.alibaba:fastjson:1.2.39"
-    compile "org.springframework.boot:spring-boot-starter-activemq:${springBootVersion}"
-    //compile "org.apache.activemq:activemq-pool:5.7.0"
+    compile "org.springframework.boot:spring-boot-starter-activemq:2.0.3.RELEASE"
+    compile "org.apache.activemq:activemq-pool:5.7.0"
 }

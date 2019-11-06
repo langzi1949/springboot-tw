@@ -74,12 +74,11 @@ dependencies {
     annotationProcessor 'org.projectlombok:lombok:1.18.2'
     compile 'org.projectlombok:lombok:1.18.2'
     testAnnotationProcessor 'org.projectlombok:lombok:1.18.2'
-    testCompile 'org.projectlombok:lombok:1.18.2'
     testCompile "org.springframework.boot:spring-boot-starter-test:${springBootVersion}"
     compile "org.apache.tomcat.embed:tomcat-embed-core:${tomcatEmbedVersion}"
     compile "org.apache.tomcat.embed:tomcat-embed-el:${tomcatEmbedVersion}"
     compile "org.apache.tomcat.embed:tomcat-embed-websocket:${tomcatEmbedVersion}"
     compile "com.alibaba:fastjson:1.2.39"
-    compile "org.springframework.boot:spring-boot-starter-activemq:2.0.3.RELEASE"
-    compile "org.apache.activemq:activemq-pool:5.7.0"
+    compile "org.springframework.boot:spring-boot-starter-amqp:${springBootVersion}"
+
 }
